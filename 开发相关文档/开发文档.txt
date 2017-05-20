@@ -1,3 +1,45 @@
 
-GitHub 实现多人协同提交代码并且权限分组管理
+1、GitHub 实现多人协同提交代码并且权限分组管理
 http://www.cnblogs.com/laogui/articles/5897438.html
+
+
+
+2.github搜索技巧
+
+  制定搜索方式：(我默认检索的关键词都是android)
+
+1）按照文件搜索
+
+android in:file
+1
+1
+(2)按照路径检索
+
+andrioid in:path
+1
+1
+(3) 按照语言检索
+
+android language:java
+1
+1
+(4)按照文件大小
+
+android size:>100
+1
+1
+(5)按照后缀名检索
+
+android extention:css
+1
+1
+(6)按照是否被fork过
+
+android fork:true
+1
+1
+（7）按照地域检索（这个猎头和hr应该用得着）
+
+项目的github’地址。欢迎大家补充
+
+android location:beijing
