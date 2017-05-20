@@ -1,0 +1,7 @@
+2017-05-12 11:13:00 [com.sc.log.logTest1.one(logTest1.java:15)]-[INFO] into one method
+ 2017-05-12 11:13:00 [com.sc.log.logTest1.one(logTest1.java:22)]-[INFO] out one method logger1
+ 2017-05-12 11:13:00 [com.sc.log.logTest1.one(logTest1.java:23)]-[INFO] 成功进入one() logger2
+ 2017-05-12 11:13:06 [com.sc.log.logTest2.one(logTest2.java:17)]-[INFO] into one method2
+ 2017-05-12 11:13:06 [com.sc.log.logTest2.one(logTest2.java:24)]-[INFO] out one method2
+ 2017-05-12 11:13:06 [com.sc.log.logTest2.one(logTest2.java:25)]-[INFO] 成功进入one()2
+ 

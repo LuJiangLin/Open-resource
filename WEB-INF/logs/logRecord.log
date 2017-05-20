@@ -1,0 +1,19 @@
+
+2017-05-12 08:57:30,459INFO [com.sc.log.logTest1.one(logTest1.java:14)] into one method
+ 
+2017-05-12 08:57:30,460ERROR [com.sc.log.logTest1.one(logTest1.java:18)] / by zero
+ 
+2017-05-12 08:57:30,460INFO [com.sc.log.logTest1.one(logTest1.java:20)] out one method
+ 
+2017-05-12 08:58:39,320INFO [com.sc.log.logTest1.one(logTest1.java:14)] into one method
+ 
+2017-05-12 08:58:39,322ERROR [com.sc.log.logTest1.one(logTest1.java:18)] / by zero
+ 
+2017-05-12 08:58:39,322INFO [com.sc.log.logTest1.one(logTest1.java:20)] out one method
+ 
+2017-05-12 09:00:31,075INFO [com.sc.log.logTest1.one(logTest1.java:14)] into one method
+ 
+2017-05-12 09:00:31,077ERROR [com.sc.log.logTest1.one(logTest1.java:18)] / by zero
+ 
+2017-05-12 09:00:31,077INFO [com.sc.log.logTest1.one(logTest1.java:20)] out one method
+ 

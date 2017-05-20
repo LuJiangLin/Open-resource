@@ -1,0 +1,7 @@
+2017-05-12 11:07:58 [com.sc.log.logTest1.one(logTest1.java:22)]-[INFO] out one method logger1
+ 2017-05-12 11:08:08 [com.sc.log.logTest2.one(logTest2.java:24)]-[INFO] out one method2
+ 2017-05-12 11:10:10 [com.sc.log.logTest1.one(logTest1.java:22)]-[INFO] out one method logger1
+ 2017-05-12 11:10:17 [com.sc.log.logTest2.one(logTest2.java:24)]-[INFO] out one method2
+ 2017-05-12 11:13:00 [com.sc.log.logTest1.one(logTest1.java:22)]-[INFO] out one method logger1
+ 2017-05-12 11:13:06 [com.sc.log.logTest2.one(logTest2.java:24)]-[INFO] out one method2
+ 

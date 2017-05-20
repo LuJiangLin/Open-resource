@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	<distributable/>
+	<display-name>TestDemo1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+  <!--TestThread 监听器  -->
+ <listener>
+    <listener-class>com.sc.test4.TestThread</listener-class>
+</listener> 
+<!-- 定时任务servlet配置 -->
+<servlet>  
+	<servlet-name>TestThread</servlet-name>  
+	<servlet-class>com.sc.test4.TestThread</servlet-class>  
+	<load-on-startup>999</load-on-startup><!-- 启动顺序 写数字即可   -->
+</servlet> 
+<servlet-mapping>
+    <servlet-name>TestThread</servlet-name>
+    <url-pattern>/TestThread</url-pattern>
+</servlet-mapping> 
+ <servlet>
+    <servlet-name>searchAjax</servlet-name>
+    <servlet-class>com.sc.ajax.searchAjax</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>searchAjax</servlet-name>
+    <url-pattern>/searchAjax</url-pattern>
+  </servlet-mapping>
+
+
+	<context-param>
+     <param-name>webAppRootKey</param-name>
+     <param-value>TestDemo1</param-value>
+ </context-param>
+	<!-- <filter>  
+	    <filter-name>sessionFilter</filter-name>  
+	    <filter-class>com.franchisee.filter.LoginFilter</filter-class>  
+	</filter>  
+	<filter-mapping>  
+	    <filter-name>sessionFilter</filter-name>  
+	    <url-pattern>/*</url-pattern>  
+	</filter-mapping> -->
+	
+	
+	<!-- 配置Spring --> 
+	<!-- <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring-*.xml</param-value>
+	</context-param> -->
+	<!-- <listener>
+		 <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener> -->
+	
+	<!-- 需要添加spring-web.jar包，否则用发生错误信息 -->
+	<!-- <listener> 
+	   <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class> 
+	</listener>  -->
+  
+  <!-- 配置SpringMVC -->
+  <!-- <servlet>
+    <servlet-name>springMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/springMVC-servlet.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet> -->
+  
+  <!-- <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping> -->
+  <!-- 设置字符集 -->
+  
+	  <!-- <filter>  
+	     <filter-name>CharacterEncodingFilter</filter-name>  
+	     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+	      <init-param>  
+	          <param-name>encoding</param-name>  
+	          <param-value>utf-8</param-value>  
+	      </init-param>  
+	    <init-param>  
+	        <param-name>forceEncoding</param-name>  
+	        <param-value>true</param-value>  
+	   	</init-param>
+	 </filter>  
+	 <filter-mapping>  
+	      <filter-name>CharacterEncodingFilter</filter-name>  
+	      <url-pattern>/*</url-pattern>  
+	 </filter-mapping>   -->
+  
+  <!-- 控制Session的开关 -->
+ <!--  <filter>
+  		<filter-name>openSession</filter-name>
+  		<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>openSession</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+ 
+  
+    <!-- 防止Spring mvc拦截一些静态资源文件 -->
+  <servlet-mapping> 
+		<servlet-name>default</servlet-name> 
+		<url-pattern>*.css</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet-mapping> 
+		<servlet-name>default</servlet-name> 
+		<url-pattern>*.gif</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet-mapping> 
+		<servlet-name>default</servlet-name> 
+		<url-pattern>*.js</url-pattern> 
+	</servlet-mapping> 
+
+	<servlet-mapping> 
+		<servlet-name>default</servlet-name> 
+		<url-pattern>*.png</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet-mapping> 
+		<servlet-name>default</servlet-name> 
+		<url-pattern>*.jpg</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet-mapping> 
+		<servlet-name>default</servlet-name> 
+		<url-pattern>*.ico</url-pattern> 
+	</servlet-mapping>
+	
+	<servlet-mapping> 
+		<servlet-name>default</servlet-name> 
+		<url-pattern>*.xml</url-pattern> 
+	</servlet-mapping>
+	
+	<servlet-mapping> 
+		<servlet-name>default</servlet-name> 
+		<url-pattern>*.htm</url-pattern> 
+	</servlet-mapping>
+</web-app>
