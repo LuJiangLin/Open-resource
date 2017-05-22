@@ -1,26 +1,37 @@
 
-  ÔÚÎÒÃÇ±à³Ì¹ý³ÌÖÐÈç¹ûÐèÒªÖ´ÐÐÒ»Ð©¼òµ¥µÄ¶¨Ê±ÈÎÎñ£¬ÎÞÐë×ö¸´ÔÓµÄ¿ØÖÆ£¬ÎÒÃÇ¿ÉÒÔ¿¼ÂÇÊ¹ÓÃJDKÖÐµÄTimer¶¨Ê±ÈÎÎñÀ´ÊµÏÖ¡£ÏÂÃæLZ¾ÍÆäÔ­Àí¡¢ÊµÀýÒÔ¼°TimerÈ±ÏÝÈý¸ö·½ÃæÀ´½âÎöJava Timer¶¨Ê±Æ÷¡£
 
-Ò»¡¢¼ò½é
-      ÔÚJavaÖÐÒ»¸öÍêÕû¶¨Ê±ÈÎÎñÐèÒªÓÉTimer¡¢TimerTaskÁ½¸öÀàÀ´ÅäºÏÍê³É¡£ APIÖÐÊÇÕâÑù¶¨ÒåËûÃÇµÄ£¬Timer£ºÒ»ÖÖ¹¤¾ß£¬Ïß³ÌÓÃÆä°²ÅÅÒÔºóÔÚºóÌ¨Ïß³ÌÖÐÖ´ÐÐµÄÈÎÎñ¡£¿É°²ÅÅÈÎÎñÖ´ÐÐÒ»´Î£¬»òÕß¶¨ÆÚÖØ¸´Ö´ÐÐ¡£
-      ÓÉTimerTask£ºTimer °²ÅÅÎªÒ»´ÎÖ´ÐÐ»òÖØ¸´Ö´ÐÐµÄÈÎÎñ¡£ÎÒÃÇ¿ÉÒÔÕâÑùÀí½âTimerÊÇÒ»ÖÖ¶¨Ê±Æ÷¹¤¾ß£¬ÓÃÀ´ÔÚÒ»¸öºóÌ¨Ïß³Ì¼Æ»®Ö´ÐÐÖ¸¶¨ÈÎÎñ£¬¶øTimerTaskÒ»¸ö³éÏóÀà£¬ËüµÄ×ÓÀà´ú±íÒ»¸ö¿ÉÒÔ±»Timer¼Æ»®
-      µÄÈÎÎñ¡£
-TimerÀà
-      ÔÚ¹¤¾ßÀàTimerÖÐ£¬Ìá¹©ÁËËÄ¸ö¹¹Ôì·½·¨£¬Ã¿¸ö¹¹Ôì·½·¨¶¼Æô¶¯ÁË¼ÆÊ±Æ÷Ïß³Ì£¬Í¬Ê±TimerÀà¿ÉÒÔ±£Ö¤¶à¸öÏß³Ì¿ÉÒÔ¹²Ïíµ¥¸öTimer¶ÔÏó¶øÎÞÐè½øÐÐÍâ²¿Í¬²½£¬ËùÒÔTimerÀàÊÇÏß³Ì°²È«µÄ¡£µ«ÊÇÓÉÓÚÃ¿Ò»¸öTimer¶ÔÏó
-      ¶ÔÓ¦µÄÊÇµ¥¸öºóÌ¨Ïß³Ì£¬ÓÃÓÚË³ÐòÖ´ÐÐËùÓÐµÄ¼ÆÊ±Æ÷ÈÎÎñ£¬Ò»°ãÇé¿öÏÂÎÒÃÇµÄÏß³ÌÈÎÎñÖ´ÐÐËùÏûºÄµÄÊ±¼äÓ¦¸Ã·Ç³£¶Ì£¬µ«ÊÇÓÉÓÚÌØÊâÇé¿öµ¼ÖÂÄ³¸ö¶¨Ê±Æ÷ÈÎÎñÖ´ÐÐµÄÊ±¼äÌ«³¤£¬ÄÇÃ´Ëû¾Í»á¡°¶ÀÕ¼¡±¼ÆÊ±Æ÷µÄÈÎÎñÖ´ÐÐÏß³Ì£¬
-      ÆäºóµÄËùÓÐÏß³Ì¶¼±ØÐëµÈ´ýËüÖ´ÐÐÍê£¬Õâ¾Í»áÑÓ³ÙºóÐøÈÎÎñµÄÖ´ÐÐ£¬Ê¹ÕâÐ©ÈÎÎñ¶Ñ»ýÔÚÒ»Æð£¬¾ßÌåÇé¿öÎÒÃÇºóÃæ·ÖÎö¡£
-      µ±³ÌÐò³õÊ¼»¯Íê³ÉTimerºó£¬¶¨Ê±ÈÎÎñ¾Í»á°´ÕÕÎÒÃÇÉè¶¨µÄÊ±¼äÈ¥Ö´ÐÐ£¬TimerÌá¹©ÁËschedule·½·¨£¬¸Ã·½·¨ÓÐ¶àÖÐÖØÔØ·½Ê½À´ÊÊÓ¦²»Í¬µÄÇé¿ö£¬ÈçÏÂ£º
-      schedule(TimerTask task, Date time)£º°²ÅÅÔÚÖ¸¶¨µÄÊ±¼äÖ´ÐÐÖ¸¶¨µÄÈÎÎñ¡£
-      schedule(TimerTask task, Date firstTime, long period) £º°²ÅÅÖ¸¶¨µÄÈÎÎñÔÚÖ¸¶¨µÄÊ±¼ä¿ªÊ¼½øÐÐÖØ¸´µÄ¹Ì¶¨ÑÓ³ÙÖ´ÐÐ¡£
-      schedule(TimerTask task, long delay) £º°²ÅÅÔÚÖ¸¶¨ÑÓ³ÙºóÖ´ÐÐÖ¸¶¨µÄÈÎÎñ¡£
-      schedule(TimerTask task, long delay, long period) £º°²ÅÅÖ¸¶¨µÄÈÎÎñ´ÓÖ¸¶¨µÄÑÓ³Ùºó¿ªÊ¼½øÐÐÖØ¸´µÄ¹Ì¶¨ÑÓ³ÙÖ´ÐÐ¡£
-      Í¬Ê±Ò²ÖØÔØÁËscheduleAtFixedRate·½·¨£¬scheduleAtFixedRate·½·¨ÓëscheduleÏàÍ¬£¬Ö»²»¹ýËûÃÇµÄ²àÖØµã²»Í¬£¬Çø±ðºóÃæ·ÖÎö¡£
-      scheduleAtFixedRate(TimerTask task, Date firstTime, long period)£º°²ÅÅÖ¸¶¨µÄÈÎÎñÔÚÖ¸¶¨µÄÊ±¼ä¿ªÊ¼½øÐÐÖØ¸´µÄ¹Ì¶¨ËÙÂÊÖ´ÐÐ¡£
-      scheduleAtFixedRate(TimerTask task, long delay, long period)£º°²ÅÅÖ¸¶¨µÄÈÎÎñÔÚÖ¸¶¨µÄÑÓ³Ùºó¿ªÊ¼½øÐÐÖØ¸´µÄ¹Ì¶¨ËÙÂÊÖ´ÐÐ¡£
-TimerTask
-      TimerTaskÀàÊÇÒ»¸ö³éÏóÀà£¬ÓÉTimer °²ÅÅÎªÒ»´ÎÖ´ÐÐ»òÖØ¸´Ö´ÐÐµÄÈÎÎñ¡£ËüÓÐÒ»¸ö³éÏó·½·¨run()·½·¨£¬¸Ã·½·¨ÓÃÓÚÖ´ÐÐÏàÓ¦¼ÆÊ±Æ÷ÈÎÎñÒªÖ´ÐÐµÄ²Ù×÷¡£Òò´ËÃ¿Ò»¸ö¾ßÌåµÄÈÎÎñÀà¶¼±ØÐë¼Ì³ÐTimerTask£¬
-      È»ºóÖØÐ´run()·½·¨¡£
-      ÁíÍâËü»¹ÓÐÁ½¸ö·Ç³éÏóµÄ·½·¨£º
-      boolean cancel()£ºÈ¡Ïû´Ë¼ÆÊ±Æ÷ÈÎÎñ¡£
-      long scheduledExecutionTime()£º·µ»Ø´ËÈÎÎñ×î½üÊµ¼ÊÖ´ÐÐµÄ°²ÅÅÖ´ÐÐÊ±¼ä¡£
+ç›®å‰å·²æœ‰åŠŸèƒ½ï¼š
+
+1ã€å®šæ—¶å™¨
+2ã€æ™ºèƒ½æœç´¢æç¤ºæ¡†
+3ã€æ—¥å¿—è¾“å‡º
+4ã€30å¤šä¸ªå¸¸ç”¨å·¥å…·ç±»ï¼ˆå¾…éªŒè¯ï¼‰
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

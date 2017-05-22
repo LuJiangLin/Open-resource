@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import net.sf.json.JSONArray;
 
 /**
- * ËÑË÷ÖÇÄÜÌáÊ¾¿ò
+ * æ™ºèƒ½æœç´¢æç¤ºæ¡†
  * @author ludashi
  * 2017.05.03
  *
@@ -20,20 +20,18 @@ import net.sf.json.JSONArray;
 @SuppressWarnings("serial")
 public class searchAjax extends HttpServlet{
 
-	//¶¨ÒåÒ»¸öÈİÆ÷,´æ·ÅÄ£ÄâÊı¾İ
+	//æœç´¢æç¤ºæ•°æ®
 	static List<String> datas = new ArrayList<String>();
 	static{
 		datas.add("ajax");
-		datas.add("ajaxÌá½»form±íµ¥");
-		datas.add("ajax½Ì³Ì");
-		datas.add("ajax½Ì³Ì123");
-		datas.add("ajax½Ì³Ì123");
-		datas.add("ajax½Ì³Ì123");
-		datas.add("ajax½Ì³Ì123");
-		datas.add("ajax½Ì³Ì123");
-		datas.add("ajax½Ì³Ì123");
-		datas.add("ajax½Ì³Ì123");
-		datas.add("ajax½Ì³Ì123");
+		datas.add("ajaxformè¡¨å•");
+		datas.add("ajax123");
+		datas.add("ajax123");
+		datas.add("ajax123");
+		datas.add("ajaxè¡¨å•123");
+		datas.add("ajaxè¡¨å•123");
+		datas.add("ajaxè¡¨å•123");
+		datas.add("ajaxè¡¨å•123");
 		datas.add("baidu");
 		datas.add("bt");
 		datas.add("byte");
@@ -41,24 +39,24 @@ public class searchAjax extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		//ÉèÖÃ×Ö·û±àÂë¸ñÊ½
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		req.setCharacterEncoding("utf-8");
 		resp.setCharacterEncoding("utf-8");
-		//Ê×ÏÈ»ñµÃ¿Í»§¶Ë·¢ËÍÀ´µÄÊı¾İ(keyword)
+		//ï¿½ï¿½ï¿½È»ï¿½Ã¿Í»ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(keyword)
 		String keyword1 = req.getParameter("keyword");
 		String keyword = Escape.unescape(keyword1);
-		//»ñµÃ¹Ø¼ü×ÖÖ®ºó½øĞĞ´¦Àí£¬µÃµ½¹ØÁªÊı¾İ
+		//ï¿½ï¿½Ã¹Ø¼ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½?ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		List<String> listData = getData(keyword);
 		
 //		System.out.println(JSONArray.fromObject(listData));
 //		JSONArray.fromObject(listData);
-		//·µ»Øjson¸ñÊ½
+		//ï¿½ï¿½ï¿½ï¿½jsonï¿½ï¿½Ê½
 		resp.getWriter().write(JSONArray.fromObject(listData).toString());
 	}
-	//»ñµÃ¹ØÁªÊı¾İµÄ·½·¨
+	//ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½İµÄ·ï¿½ï¿½ï¿½
 	public List<String> getData(String keyword){
 		List<String> list = new ArrayList<String>();
-		Integer i=0;//ÏŞÖÆÌáÊ¾¿òÌõÊıÎªiÌõ
+		Integer i=0;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªiï¿½ï¿½
 		for (String data : datas) {
 			if(i<5){
 				if(data.contains(keyword)){
